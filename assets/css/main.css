@@ -229,7 +229,7 @@ input, select, textarea {
 		} 
 	
 	.nmg:hover { 
-		transform: scale(3); 
+		transform: scale(2); 
 	}
 
 /* Container */
