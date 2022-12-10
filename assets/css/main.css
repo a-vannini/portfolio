@@ -2280,8 +2280,8 @@ input, select, textarea {
 
 			#main > section.one {
 				background-color: #81918E;
-				/* background-image: url("../../images/titelbild.jpeg"); */
-				background-image: url("../../images/visual_quer.jpg");
+				/* background-image: url("../../media/titelbild.jpeg"); */
+				background-image: url("../../media/visual_quer.jpg");
 			}
 
 			#main > section.two {
