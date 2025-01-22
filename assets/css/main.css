@@ -26,6 +26,10 @@ section, summary, time, mark, audio, video {
 	text-align: left;
 	vertical-align: baseline;}
 
+.right-aligned {
+	text-align: center;
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
