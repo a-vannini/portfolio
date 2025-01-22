@@ -2278,10 +2278,10 @@ input, select, textarea {
 				background-position: center center;
 			}
 
-			#main > section.one {
+			/* #main > section.one {
 				background-color: #81918E;
-				/* background-image: url("../../media/visual_quer.jpg"); */
-			}
+				background-image: url("../../media/visual_quer.jpg");
+			} */
 
 			#main > section.two {
 				background-color: #f5fafa;
