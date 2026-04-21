@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="../../">&larr; Zurück zum Portfolio</a></p>
+
+    {{ content }}
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      {% if page.authors %}
+        <p>Autoren: {{ page.authors }}</p>
+      {% endif %}
+      <p>&copy; {{ "now" | date: "%Y" }} Alessia Vannini. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+</body>
+</html>

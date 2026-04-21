@@ -1,0 +1,9 @@
+---
+# Diese Leerzeilen (mit ---) sind nötig, damit Jekyll die SCSS-Datei kompiliert
+---
+@charset "utf-8";
+
+@import
+  'normalize',
+  'biscuit',
+  'syntax';
