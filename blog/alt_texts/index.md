@@ -188,14 +188,13 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 ### Beispiel 1 — Pro-Kopf-Konsum Schweiz vs. China (gelungen)
 
-<div style="display: flex; gap: 2em; align-items: flex-start; margin: 0 auto 1.5em; max-width: 900px;">
+<div style="display: flex; gap: 2em; align-items: flex-start; margin: 1.5em auto 1.5em; max-width: 900px;">
   <figure style="flex: 0 0 55%; margin: 0;">
     <img src="assets/example_1.png" 
          alt="..." 
          style="width: 100%; display: block;">
   </figure>
   <div style="flex: 1;">
-    <h4 style="margin-top: 0;">Scores</h4>
     <p>SBERT: 0.95</p>
     <p>LLM-Judge (1–5):</p>
     <ul>
@@ -221,13 +220,25 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 ### Beispiel 2 — Luft- und Wassertemperatur Zürich (gelungen)
 
-<figure style="max-width: 550px; margin: 0 auto 1.5em;">
-  <img src="assets/example_2.png" 
-       alt="..." 
-       style="width: 100%; display: block;">
-</figure>
-
-**Scores:** SBERT 0.92 · LLM-Judge (1–5): Klarheit 5, Vollständigkeit 5, Kürze 1, gefühlte Vollständigkeit 5, Neutralität 5, Korrektheit 5
+<div style="display: flex; gap: 2em; align-items: flex-start; margin: 1.5em auto 1.5em; max-width: 900px;">
+  <figure style="flex: 0 0 55%; margin: 0;">
+    <img src="assets/example_2.png" 
+         alt="..." 
+         style="width: 100%; display: block;">
+  </figure>
+  <div style="flex: 1;">
+    <p>SBERT: 0.92</p>
+    <p>LLM-Judge (1–5):</p>
+    <ul>
+      <li>Klarheit: 5</li>
+      <li>Vollständigkeit: 5</li>
+      <li>Kürze: 1</li>
+      <li>Gefühlte Vollständigkeit: 5</li>
+      <li>Neutralität: 5</li>
+      <li>Korrektheit: 5</li>
+    </ul>
+  </div>
+</div>
 
 **Gold-Standard (Overview):**
 
@@ -241,13 +252,25 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 ### Beispiel 3 — Bevölkerungsprognose 2100 (problematisch)
 
-<figure style="max-width: 550px; margin: 0 auto 1.5em;">
-  <img src="assets/example_3.png" 
-       alt="..." 
-       style="width: 100%; display: block;">
-</figure>
-
-**Scores:** SBERT 0.64 · LLM-Judge (1–5): Klarheit 4, Vollständigkeit 2, Kürze 1, gefühlte Vollständigkeit 4, Neutralität 3, Korrektheit 5
+<div style="display: flex; gap: 2em; align-items: flex-start; margin: 1.5em auto 1.5em; max-width: 900px;">
+  <figure style="flex: 0 0 55%; margin: 0;">
+    <img src="assets/example_3.png" 
+         alt="..." 
+         style="width: 100%; display: block;">
+  </figure>
+  <div style="flex: 1;">
+    <p>SBERT: 0.64</p>
+    <p>LLM-Judge (1–5):</p>
+    <ul>
+      <li>Klarheit: 4</li>
+      <li>Vollständigkeit: 2</li>
+      <li>Kürze: 1</li>
+      <li>Gefühlte Vollständigkeit: 4</li>
+      <li>Neutralität: 3</li>
+      <li>Korrektheit: 5</li>
+    </ul>
+  </div>
+</div>
 
 **Gold-Standard (lange Beschreibung):**
 
@@ -261,13 +284,25 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 ### Beispiel 4 — Konsumentenpreise Deutschland, Schweiz, USA (problematisch)
 
-<figure style="max-width: 550px; margin: 0 auto 1.5em;">
-  <img src="assets/example_4.png" 
-       alt="..." 
-       style="width: 100%; display: block;">
-</figure>
-
-**Scores:** SBERT 0.68 · LLM-Judge (1–5): Klarheit 4, Vollständigkeit 4, Kürze 2, gefühlte Vollständigkeit 5, Neutralität 3, Korrektheit 2
+<div style="display: flex; gap: 2em; align-items: flex-start; margin: 1.5em auto 1.5em; max-width: 900px;">
+  <figure style="flex: 0 0 55%; margin: 0;">
+    <img src="assets/example_4.png" 
+         alt="..." 
+         style="width: 100%; display: block;">
+  </figure>
+  <div style="flex: 1;">
+    <p>SBERT: 0.68</p>
+    <p>LLM-Judge (1–5):</p>
+    <ul>
+      <li>Klarheit: 4</li>
+      <li>Vollständigkeit: 4</li>
+      <li>Kürze: 2</li>
+      <li>Gefühlte Vollständigkeit: 5</li>
+      <li>Neutralität: 3</li>
+      <li>Korrektheit: 2</li>
+    </ul>
+  </div>
+</div>
 
 **Gold-Standard (Overview):**
 
