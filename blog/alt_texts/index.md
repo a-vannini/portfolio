@@ -9,13 +9,13 @@ authors: "Alessia Vannini"
 
 Stell dir vor, du beginnst deinen Tag wie viele andere: Du öffnest die Nachrichten-App und scrollst durch die Schlagzeilen. Doch statt zu lesen, hörst du. Ein Screen Reader liest dir vor, was auf dem Bildschirm steht. Du kommst zu einem Artikel über die Inflation in der Schweiz. Der Text ist informativ — und dann ist da diese Grafik, die alles auf einen Blick zeigen würde. Doch der Screen Reader verstummt. Oder sagt nur: «Grafik».
 
-In der Schweiz leben über 377'000 Menschen mit einer Sehbehinderung, Blindheit oder Hörsehbehinderung. Etwa 50'000 davon sind blind, die übrigen verfügen über ein eingeschränktes Restsehvermögen. Mit der demografischen Alterung wächst diese Zahl jedes Jahr — bemerkenswert ist auch, dass über 70 Prozent ihre Sehbehinderung erst im Erwachsenenalter erworben haben.
+In der Schweiz leben [über 377'000 Menschen](https://www.szblind.ch/fileadmin/pdfs/Forschung/Forschungsberichte/SZBLIND_-_Sehbehinderung_..._Entwicklung_in_der_Schweiz_-_Berechnungen_2019_bf.pdf) mit einer Sehbehinderung, Blindheit oder Hörsehbehinderung. Etwa 50'000 davon sind blind, die übrigen verfügen über ein eingeschränktes Restsehvermögen. Mit der demografischen Alterung wächst diese Zahl jedes Jahr — bemerkenswert ist auch, dass über 70 Prozent ihre Sehbehinderung erst im Erwachsenenalter erworben haben.
 
-Für viele dieser Menschen ist der E-Kiosk des Schweizerischen Blinden- und Sehbehindertenverbands (SBV) die zentrale Anlaufstelle für tagesaktuelle Informationen. Über 70 Zeitungen und Magazine sind dort in zugänglichem Format verfügbar — die NZZ ist eine davon. Aber: Visuelle Inhalte fehlen vollständig. Wer auf eine herkömmliche Online-Zeitung ausweicht, findet zwar Bilder und Charts, aber meist nur eine Caption darunter — und die ist für sehende Leserinnen und Leser geschrieben. Sie ergänzt das Bild, ersetzt es aber nicht.
+Für viele dieser Menschen ist der [E-Kiosk](https://sbv-fsa.ch/publikationen-und-apps/apps/e-kiosk/) des Schweizerischen Blinden- und Sehbehindertenverbands (SBV) die zentrale Anlaufstelle für tagesaktuelle Informationen. Über 70 Zeitungen und Magazine sind dort in zugänglichem Format verfügbar — die NZZ ist eine davon. Aber: Visuelle Inhalte fehlen vollständig. Wer auf eine herkömmliche Online-Zeitung ausweicht, findet zwar Bilder und Charts, aber meist nur eine Caption darunter — und die ist für sehende Leserinnen und Leser geschrieben. Sie ergänzt das Bild, ersetzt es aber nicht.
 
 Genau hier setzte unser Challenge-X-Projekt an der FHNW an. Gemeinsam mit der NZZ und dem SBV haben wir ein Semester lang untersucht, wie weit Sprachmodelle (LLMs) heute beim automatischen Generieren von Alt-Texten für Charts kommen — und wo sie an Grenzen stossen.
 
-<img src="assets/title-illustration.png" alt="..." style="max-width: 500px; width: 100%;">
+<img src="assets/title-illustration.png" alt="..." style="max-width: 700px; width: 100%;">
 
 ## Lesen ohne Augen — und was dabei verloren geht
 
@@ -24,7 +24,7 @@ Bevor wir uns den technischen Teil anschauen, lohnt es sich kurz zu verstehen, w
 Eine Ergänzung zum Screen Reader sind Braille-Displays. Diese Geräte stellen Text taktil dar, indem kleine Stifte sich heben oder senken und so Braille-Zeichen formen. Wer Braille flüssig liest, kann darüber Text fast wie mit den Augen «scannen» — vor- und zurückspringen, sich orientieren. Allerdings nutzt nicht jede sehbehinderte Person ein Braille-Display: Wer im Erwachsenenalter erblindet, lernt Braille oft nicht mehr fluent. Audio bleibt dann der einzige Zugang.
 
 <img src="assets/braille_display.jpg" alt="..." 
-     style="float: right; width: 150px; margin: 0 0 1em 1em;">
+     style="float: right; width: 250px; margin: 0 0 1em 1em;">
 
 Ein zentraler Unterschied zu sehenden Lesenden: Audio ist sequenziell. Wer hört, bekommt Information Wort für Wort — anders als beim Sehen, wo wir auf einen Blick eine ganze Seite überfliegen können. Genau das macht Charts zur Herausforderung. Ein Liniendiagramm vermittelt sehenden Personen sofort einen Eindruck von Trend, Spitzen und Tiefpunkten. Über Audio muss diese Information erst sequenziell aufgebaut werden — das verlangt mehr kognitive Anstrengung und stellt höhere Anforderungen an die Beschreibung.
 
@@ -34,17 +34,17 @@ Heute fehlen Alt-Texte bei Charts in der Praxis fast überall. Die NZZ liefert f
 
 ## Was ein guter Chart-Alt-Text leisten muss
 
-Die Web Content Accessibility Guidelines (WCAG 2.2) regeln, wie Webinhalte zugänglich gemacht werden müssen. Für Charts gilt Technique G95 unter Guideline 1.1.1: Non-text Content. Sie verlangt, dass nicht-textliche Inhalte über Textalternativen vermittelbar sind, und unterscheidet zwischen einer kurzen und einer langen Beschreibung. Die kurze Beschreibung gibt eine schnelle Orientierung, die lange enthält die vollständige Information des Charts.
+Die Web Content Accessibility Guidelines (WCAG 2.2) regeln, wie Webinhalte zugänglich gemacht werden müssen. Für Charts gilt [Technique G95](https://www.w3.org/WAI/WCAG22/Techniques/general/G95.html) unter Guideline 1.1.1: Non-text Content. Sie verlangt, dass nicht-textliche Inhalte über Textalternativen vermittelbar sind, und unterscheidet zwischen einer kurzen und einer langen Beschreibung. Die kurze Beschreibung gibt eine schnelle Orientierung, die lange enthält die vollständige Information des Charts.
 
 Konkret nennen die Guidelines allerdings nur ein einziges Beispiel:
 
 > *A chart showing sales for October has a short text alternative of «October sales chart.» The chart also has a long description that provides all of the information on the chart.*
 
-Wie eine solche lange Beschreibung aussieht — wie viel Detail nötig ist, ob Werte exakt oder gerundet, ob Trends oder einzelne Datenpunkte priorisiert werden sollen — bleibt offen. Mit dem Inkrafttreten des European Accessibility Act (EAA) im Juni 2025 hat sich diese Lücke verschärft: Aus einer Empfehlung wurde eine gesetzliche Pflicht.
+Wie eine solche lange Beschreibung aussieht — wie viel Detail nötig ist, ob Werte exakt oder gerundet, ob Trends oder einzelne Datenpunkte priorisiert werden sollen — bleibt offen. Mit dem Inkrafttreten des [European Accessibility Act (EAA)](https://eur-lex.europa.eu/eli/dir/2019/882/oj/eng) im Juni 2025 hat sich diese Lücke verschärft: Aus einer Empfehlung wurde eine gesetzliche Pflicht.
 
-Auf Basis bestehender Forschung (vor allem Jung et al. 2022 und Belle et al. 2022) und unserer eigenen Vorarbeit haben wir ein dreistufiges Strukturmodell entwickelt:
+Auf Basis bestehender Forschung (vor allem [Jung et al. 2022](https://doi.org/10.1109/TVCG.2021.3114846) und [Belle et al. 2022](https://doi.org/10.5220/0010994600003176)) und unserer eigenen Vorarbeit haben wir ein dreistufiges Strukturmodell entwickelt:
 
-![Strukturmodell für Chart-Alt-Texte: Kurzbeschreibung mit Metadaten und Überblick, Link zur langen Beschreibung mit Trends und Vergleichen, Datentabelle](assets/alt_text_structure.png)
+<img src="assets/alt_text_structure.png" alt="..." style="max-width: 700px; width: 100%;">
 
 Die Kurzbeschreibung enthält zwei Teile: zuerst die Metadaten (Diagrammtyp, Titel, Achsenbeschriftungen, Wertbereich), dann einen kurzen Überblick über die Hauptaussage. Erst danach folgt die lange Beschreibung mit Details zu Trends, Vergleichen und Extremwerten. Optional ergänzt eine maschinenlesbare Datentabelle das Ganze.
 
@@ -58,21 +58,24 @@ Innerhalb jedes Typs unterscheiden wir zwischen «simplen» und «komplexen» Ch
 
 Linien-Charts zeigen immer Zeitreihen auf der x-Achse. Simpel: eine Linie. Komplex: mehrere Linien, etwa ein Vergleich verschiedener Indizes über die Zeit.
 
-![Simples Liniendiagramm: Rendite 10-jähriger US-Staatsanleihen 2017](assets/line_simple.png)
-
-![Komplexes Liniendiagramm: Inflation in der Schweiz mit drei Linien für Total, Importgüter und Inlandgüter](assets/line_complex.png)
+<div style="display: flex; gap: 1em; align-items: flex-start;">
+  <img src="assets/line_simple.png" alt="Simples Liniendiagramm: Rendite 10-jähriger US-Staatsanleihen 2017" style="width: 50%;">
+  <img src="assets/line_complex.png" alt="Komplexes Liniendiagramm: Inflation in der Schweiz" style="width: 50%;">
+</div>
 
 Balken-Charts können horizontal oder vertikal sein und zeigen entweder Zeitreihen oder kategorische Daten. Komplexe Varianten kombinieren beispielsweise mehrere Kategorien innerhalb einer Zeitreihe oder eines Vergleichs.
 
-![Simples Balkendiagramm: Besucherzahlen am Züri-Fäscht von 1998 bis 2019](assets/bar_simple.png)
-
-![Komplexes Balkendiagramm: Pro-Kopf-Konsum von Nahrungsmitteln im Vergleich China und Schweiz](assets/bar_complex.png)
+<div style="display: flex; gap: 1em; align-items: flex-start;">
+  <img src="assets/bar_simple.png" alt="..." style="width: 50%;">
+  <img src="assets/bar_complex.png" alt="..." style="width: 50%;">
+</div>
 
 Gestapelte Balken-Charts zerlegen einen Wert in seine Bestandteile — entweder mit absoluten Werten oder als 100-Prozent-Darstellung.
 
-![Simples gestapeltes Balkendiagramm: Geschlechterverteilung im Zürcher Kantonsrat seit 1967](assets/stacked_bar_simple.png)
-
-![Komplexes gestapeltes Balkendiagramm: Sportaktivität im Kanton Zürich 2003 bis 2020](assets/stacked_bar_complex.png)
+<div style="display: flex; gap: 1em; align-items: flex-start;">
+  <img src="assets/stacked_bar_simple.png" alt="..." style="width: 50%;">
+  <img src="assets/stacked_bar_complex.png" alt="..." style="width: 50%;">
+</div>
 
 Hinzu kommen visuelle Encodings, die für Alt-Texte besonders herausfordernd sind: Highlights (etwa farblich hervorgehobene Balken), Prognosen (gestrichelte Linien) und Events (vertikale Marker mit Beschriftung). Diese tragen zentrale Informationen — und müssen explizit beschrieben werden, sonst verschwindet die Aussage des Charts.
 
@@ -140,7 +143,7 @@ Die Kurzbeschreibung mit Diagrammtyp, Titel, Achsen und Wertbereich ist determin
 
 Selbst mit expliziten Wortlimits im Prompt produzierten die LLM-Texte durchgängig längere Beschreibungen als unsere Gold-Standards. Bei komplexen Charts war der Effekt am stärksten. Höhere Temperature-Werte verschärften ihn zusätzlich.
 
-![Boxplot der Zeichenanzahl von Gold-Standard und LLM-generierten Texten nach Chart-Typ und Komplexität](assets/character-counts.png)
+<img src="assets/character-counts.png" alt="..." style="max-width: 700px; width: 100%;">
 
 Interessant dabei: Die interviewten Personen bewerteten Vollständigkeit oft besser bei längeren Texten — aber Kürze gleichzeitig schlechter. Das LLM-as-a-Judge war strenger und vergab niedrigere Conciseness-Scores. Das deckt sich mit dem qualitativen Feedback der Interviews: «Pseudo-Präzision» wie 2.54 Prozent statt rund 2 Prozent wurde explizit als kognitiv anstrengend genannt. Die Lehre: Wortlimits allein reichen nicht. Es braucht Stilregeln, die Aggregation und Rundung explizit fordern.
 
@@ -156,7 +159,7 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 ### Beispiel 1 — Pro-Kopf-Konsum Schweiz vs. China (gelungen)
 
-![Balkendiagramm zum Pro-Kopf-Konsum verschiedener Nahrungsmittel im Vergleich China und Schweiz](assets/example_1.png)
+<img src="assets/example_1.png" alt="..." style="max-width: 700px; width: 100%;">
 
 **Scores:** SBERT 0.95 · LLM-Judge (1–5): Klarheit 2, Vollständigkeit 3, Kürze 1, gefühlte Vollständigkeit 2, Neutralität 4, Korrektheit 2
 
@@ -172,7 +175,7 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 ### Beispiel 2 — Luft- und Wassertemperatur Zürich (gelungen)
 
-![Liniendiagramm: Luft- und Wassertemperatur in Zürich 1973 bis 2019](assets/example_2.png)
+<img src="assets/example_2.png" alt="..." style="max-width: 700px; width: 100%;">
 
 **Scores:** SBERT 0.92 · LLM-Judge (1–5): Klarheit 5, Vollständigkeit 5, Kürze 1, gefühlte Vollständigkeit 5, Neutralität 5, Korrektheit 5
 
@@ -188,7 +191,7 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 ### Beispiel 3 — Bevölkerungsprognose 2100 (problematisch)
 
-![Balkendiagramm mit Bevölkerungsprognosen für 2100 im Vergleich zu 2023 für 12 Länder](assets/example_3.png)
+<img src="assets/example_3.png" alt="..." style="max-width: 700px; width: 100%;">
 
 **Scores:** SBERT 0.64 · LLM-Judge (1–5): Klarheit 4, Vollständigkeit 2, Kürze 1, gefühlte Vollständigkeit 4, Neutralität 3, Korrektheit 5
 
@@ -204,7 +207,7 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 ### Beispiel 4 — Konsumentenpreise Deutschland, Schweiz, USA (problematisch)
 
-![Liniendiagramm: Konsumentenpreise 2016 bis 2021 in Deutschland, der Schweiz und den USA](assets/example_4.png)
+<img src="assets/example_4.png" alt="..." style="max-width: 700px; width: 100%;">
 
 **Scores:** SBERT 0.68 · LLM-Judge (1–5): Klarheit 4, Vollständigkeit 4, Kürze 2, gefühlte Vollständigkeit 5, Neutralität 3, Korrektheit 2
 
@@ -232,9 +235,25 @@ Was offen bleibt: Mehr Chart-Typen müssten abgedeckt werden — Karten, Streudi
 
 Die EAA verlangt seit Juni 2025 zugängliche Charts. Vielleicht hört der Screen Reader bei der nächsten NZZ-Lektüre nicht mehr auf, sobald ein Chart kommt — sondern fängt an zu erzählen.
 
+## Quellen
+
+- Accessibility Guidelines Working Group (o. J.). *Technique G95: Providing short text alternatives that provide a brief description of the non-text content.* W3C. [w3.org/WAI/WCAG22/Techniques/general/G95](https://www.w3.org/WAI/WCAG22/Techniques/general/G95.html)
+
+- Belle, A. et al. (2022). *Alt-texify: A pipeline to generate alt-text from SVG visualizations.* ENASE. [doi.org/10.5220/0010994600003176](https://doi.org/10.5220/0010994600003176)
+
+- European Union (2019). *Directive (EU) 2019/882 on the accessibility requirements for products and services.* [eur-lex.europa.eu](https://eur-lex.europa.eu/eli/dir/2019/882/oj/eng)
+
+- Jung, C. et al. (2022). *Communicating visualizations without visuals: Investigation of visualization alternative text for people with visual impairments.* IEEE TVCG, 28(1), 1095–1105. [doi.org/10.1109/TVCG.2021.3114846](https://doi.org/10.1109/TVCG.2021.3114846)
+
+- Reimers, N. & Gurevych, I. (2019). *Sentence-BERT: Sentence embeddings using Siamese BERT-networks.* [arxiv.org/abs/1908.10084](https://arxiv.org/abs/1908.10084)
+
+- Schweizerischer Blinden- und Sehbehindertenverband (SBV). *E-Kiosk.* [sbv-fsa.ch](https://sbv-fsa.ch/publikationen-und-apps/apps/e-kiosk/)
+
+- Spring, S. (2019). *Sehbehinderung, Blindheit und Hörsehbehinderung: Entwicklung in der Schweiz — Berechnungen 2019.* SZBLIND. [szblind.ch](https://www.szblind.ch/fileadmin/pdfs/Forschung/Forschungsberichte/SZBLIND_-_Sehbehinderung_..._Entwicklung_in_der_Schweiz_-_Berechnungen_2019_bf.pdf)
+
 ## Über das Projekt
 
-Dieser Beitrag basiert auf dem Challenge-X-Projekt *Improving Accessibility of Charts through LLM-Generated Alt Texts*, durchgeführt im Herbstsemester 2025 an der Hochschule für Technik FHNW.
+Dieser Beitrag basiert auf dem Challenge-X-Projekt *Improving Accessibility of Charts through LLM-Generated Alt Texts*, durchgeführt im Herbstsemester 2025 an der Hochschule für Informatik FHNW.
 
 **Team:** Julia Locher und Alessia Vannini
 
@@ -244,6 +263,9 @@ Dieser Beitrag basiert auf dem Challenge-X-Projekt *Improving Accessibility of C
 
 **Repository:** [github.com/a-vannini/AltText4Charts](https://github.com/a-vannini/AltText4Charts)
 
-![Logo der NZZ](assets/NZZ.png)
-![Logo des Schweizerischen Blinden- und Sehbehindertenverbands SBV](assets/SBV.jpg)
-![Logo der Hochschule für Technik FHNW](assets/FHNW_HSI_DE.png)
+
+<div style="display: flex; gap: 1em; align-items: flex-start;">
+  <img src="assets/NZZ.png" alt="NZZ Logog" style="width: 50%;">
+  <img src="assets/SBV.jpg" alt="BV Logo" style="width: 50%;">
+  <img src="assets/FHNW_HSI_DE.png" alt="FHNW Logo" style="width: 50%;">
+</div>
