@@ -190,7 +190,7 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 
 <figure style="max-width: 550px; margin: 0 auto 1.5em;">
-  <img src="assets/assets/example_1.png" 
+  <img src="assets/example_1.png" 
        alt="..." 
        style="width: 100%; display: block;">
 </figure>
@@ -210,7 +210,7 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 ### Beispiel 2 — Luft- und Wassertemperatur Zürich (gelungen)
 
 <figure style="max-width: 550px; margin: 0 auto 1.5em;">
-  <img src="assets/assets/example_2.png" 
+  <img src="assets/example_2.png" 
        alt="..." 
        style="width: 100%; display: block;">
 </figure>
@@ -230,7 +230,7 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 ### Beispiel 3 — Bevölkerungsprognose 2100 (problematisch)
 
 <figure style="max-width: 550px; margin: 0 auto 1.5em;">
-  <img src="assets/assets/example_3.png" 
+  <img src="assets/example_3.png" 
        alt="..." 
        style="width: 100%; display: block;">
 </figure>
@@ -250,7 +250,7 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 ### Beispiel 4 — Konsumentenpreise Deutschland, Schweiz, USA (problematisch)
 
 <figure style="max-width: 550px; margin: 0 auto 1.5em;">
-  <img src="assets/assets/example_4.png" 
+  <img src="assets/example_4.png" 
        alt="..." 
        style="width: 100%; display: block;">
 </figure>
@@ -310,8 +310,8 @@ Dieser Beitrag basiert auf dem Challenge-X-Projekt *Improving Accessibility of C
 **Repository:** [github.com/a-vannini/AltText4Charts](https://github.com/a-vannini/AltText4Charts)
 
 
-<div style="display: flex; gap: 1em; align-items: flex-start;">
-  <img src="assets/NZZ.png" alt="NZZ Logog" style="width: 30%;">
-  <img src="assets/SBV.jpg" alt="BV Logo" style="width: 30%;">
-  <img src="assets/FHNW_HSI_DE.png" alt="FHNW Logo" style="width: 30%;">
+<div style="display: flex; gap: 1em; align-items: center; margin-top: 2em;">
+  <img src="assets/NZZ.png" alt="NZZ Logo">
+  <img src="assets/SBV.jpg" alt="SBV Logo">
+  <img src="assets/FHNW_HSI_DE.png" alt="FHNW Logo">
 </div>
