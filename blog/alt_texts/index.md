@@ -188,14 +188,26 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 ### Beispiel 1 — Pro-Kopf-Konsum Schweiz vs. China (gelungen)
 
-
-<figure style="max-width: 550px; margin: 0 auto 1.5em;">
-  <img src="assets/example_1.png" 
-       alt="..." 
-       style="width: 100%; display: block;">
-</figure>
-
-**Scores:** SBERT 0.95 · LLM-Judge (1–5): Klarheit 2, Vollständigkeit 3, Kürze 1, gefühlte Vollständigkeit 2, Neutralität 4, Korrektheit 2
+<div style="display: flex; gap: 2em; align-items: flex-start; margin: 0 auto 1.5em; max-width: 900px;">
+  <figure style="flex: 0 0 55%; margin: 0;">
+    <img src="assets/example_1.png" 
+         alt="..." 
+         style="width: 100%; display: block;">
+  </figure>
+  <div style="flex: 1;">
+    <h4 style="margin-top: 0;">Scores</h4>
+    <p>SBERT: 0.95</p>
+    <p>LLM-Judge (1–5):</p>
+    <ul>
+      <li>Klarheit: 2</li>
+      <li>Vollständigkeit: 3</li>
+      <li>Kürze: 1</li>
+      <li>Gefühlte Vollständigkeit: 2</li>
+      <li>Neutralität: 4</li>
+      <li>Korrektheit: 2</li>
+    </ul>
+  </div>
+</div>
 
 **Gold-Standard (lange Beschreibung):**
 
@@ -310,8 +322,8 @@ Dieser Beitrag basiert auf dem Challenge-X-Projekt *Improving Accessibility of C
 **Repository:** [github.com/a-vannini/AltText4Charts](https://github.com/a-vannini/AltText4Charts)
 
 
-<div style="display: flex; gap: 1em; align-items: center; margin-top: 2em;">
-  <img src="assets/NZZ.png" alt="NZZ Logo">
-  <img src="assets/SBV.jpg" alt="SBV Logo">
-  <img src="assets/FHNW_HSI_DE.png" alt="FHNW Logo">
+<div style="display: flex; gap: 1em; align-items: center; margin-top: 2em; max-width: 900px;">
+  <img src="assets/NZZ.png" alt="NZZ Logo" style="max-width: 100%;">
+  <img src="assets/SBV.jpg" alt="SBV Logo" style="max-width: 100%;">
+  <img src="assets/FHNW_HSI_DE.png" alt="FHNW Logo" style="max-width: 100%;">
 </div>
