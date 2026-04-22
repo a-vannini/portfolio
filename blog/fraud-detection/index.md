@@ -2,7 +2,7 @@
 layout: blog
 title: "Betrüger im Visier von Machine Learning"
 description: "Erkennung von Geldwäscheversuchen mithilfe klassischer Neuronaler Netze und graph-basierter Methoden wie Graph Neural Networks."
-authors: "Janis Frölich, Julia Locher, Alessia Vannini"
+author: "Alessia Vannini"
 ---
 
 ![Banner](assets/banner.png)

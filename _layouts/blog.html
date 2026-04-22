@@ -17,11 +17,10 @@
 
     {{ content }}
   </div>
-
   <footer class="footer">
     <div class="footer-content">
-      {% if page.authors %}
-        <p>Autoren: {{ page.authors }}</p>
+      {% if page.author %}
+        <p>Autorin: {{ page.author }}</p>
       {% endif %}
       <p>&copy; {{ "now" | date: "%Y" }} Alessia Vannini. Alle Rechte vorbehalten.</p>
     </div>

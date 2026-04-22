@@ -2,7 +2,7 @@
 layout: blog
 title: "KI-generierte Alt-Texte für Charts"
 description: "Wie Sprachmodelle blinden und sehbehinderten Personen helfen können, Datenvisualisierungen zu verstehen — und wo sie an Grenzen stossen."
-authors: "Alessia Vannini"
+author: "Alessia Vannini"
 ---
 
 ## Wenn der Screen Reader verstummt
