@@ -357,8 +357,8 @@ Dieser Beitrag basiert auf dem Challenge-X-Projekt *Improving Accessibility of C
 **Repository:** [github.com/a-vannini/AltText4Charts](https://github.com/a-vannini/AltText4Charts)
 
 
-<div style="display: flex; gap: 1em; align-items: center; margin-top: 2em; max-width: 900px;">
-  <img src="assets/NZZ.png" alt="NZZ Logo" style="width: 100%; max-width: 300px; height: auto;">
-  <img src="assets/SBV.jpg" alt="SBV Logo" style="width: 100%; max-width: 300px; height: auto;">
-  <img src="assets/FHNW_HSI_DE.png" alt="FHNW Logo" style="width: 100%; max-width: 300px; height: auto;">
+<div style="display: flex; gap: 1em; align-items: center; margin-top: 2em;">
+  <img src="assets/NZZ.png" alt="NZZ Logo" style="flex: 1 1 0; min-width: 0; max-width: 300px; height: auto;">
+  <img src="assets/SBV.jpg" alt="SBV Logo" style="flex: 1 1 0; min-width: 0; max-width: 300px; height: auto;">
+  <img src="assets/FHNW_HSI_DE.png" alt="FHNW Logo" style="flex: 1 1 0; min-width: 0; max-width: 300px; height: auto;">
 </div>
