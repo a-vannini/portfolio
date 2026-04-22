@@ -15,7 +15,11 @@ Für viele dieser Menschen ist der [E-Kiosk](https://sbv-fsa.ch/publikationen-un
 
 Genau hier setzte unser Challenge-X-Projekt an der FHNW an. Gemeinsam mit der NZZ und dem SBV haben wir ein Semester lang untersucht, wie weit Sprachmodelle (LLMs) heute beim automatischen Generieren von Alt-Texten für Charts kommen — und wo sie an Grenzen stossen.
 
-<img src="assets/title-illustration.png" alt="..." style="max-width: 700px; width: 100%;">
+<figure style="max-width: 550px; margin: 0 auto 1.5em;">
+  <img src="assets/title-illustration.png" 
+       alt="..." 
+       style="width: 100%; display: block;">
+</figure>
 
 ## Lesen ohne Augen — und was dabei verloren geht
 
@@ -44,7 +48,11 @@ Wie eine solche lange Beschreibung aussieht — wie viel Detail nötig ist, ob W
 
 Auf Basis bestehender Forschung (vor allem [Jung et al. 2022](https://doi.org/10.1109/TVCG.2021.3114846) und [Belle et al. 2022](https://doi.org/10.5220/0010994600003176)) und unserer eigenen Vorarbeit haben wir ein dreistufiges Strukturmodell entwickelt:
 
-<img src="assets/alt_text_structure.png" alt="..." style="max-width: 700px; width: 100%;">
+<figure style="max-width: 550px; margin: 0 auto 1.5em;">
+  <img src="assets/alt_text_structure.png" 
+       alt="..." 
+       style="width: 100%; display: block;">
+</figure>
 
 Die Kurzbeschreibung enthält zwei Teile: zuerst die Metadaten (Diagrammtyp, Titel, Achsenbeschriftungen, Wertbereich), dann einen kurzen Überblick über die Hauptaussage. Erst danach folgt die lange Beschreibung mit Details zu Trends, Vergleichen und Extremwerten. Optional ergänzt eine maschinenlesbare Datentabelle das Ganze.
 
@@ -57,25 +65,42 @@ Die NZZ stellte uns 168 Charts mit zugehörigen JSON-Metadaten und PNG-Rendering
 Innerhalb jedes Typs unterscheiden wir zwischen «simplen» und «komplexen» Charts. Diese Unterscheidung ist nicht ästhetisch, sondern strukturell: Ein simpler Chart enthält eine einzige Datenreihe, ein komplexer Chart zwei oder mehr.
 
 Linien-Charts zeigen immer Zeitreihen auf der x-Achse. Simpel: eine Linie. Komplex: mehrere Linien, etwa ein Vergleich verschiedener Indizes über die Zeit.
-
-<div style="display: flex; gap: 1em; align-items: flex-start;">
-  <img src="assets/line_simple.png" alt="Simples Liniendiagramm: Rendite 10-jähriger US-Staatsanleihen 2017" style="width: 50%;">
-  <img src="assets/line_complex.png" alt="Komplexes Liniendiagramm: Inflation in der Schweiz" style="width: 50%;">
-</div>
+<figure style="margin: 0 auto 1.5em; max-width: 800px;">
+  <div style="display: flex; gap: 1em; align-items: flex-start;">
+    <img src="assets/line_simple.png" 
+         alt="..." 
+         style="width: 50%;">
+    <img src="assets/line_complex.png" 
+         alt="..." 
+         style="width: 50%;">
+  </div>
+</figure>
 
 Balken-Charts können horizontal oder vertikal sein und zeigen entweder Zeitreihen oder kategorische Daten. Komplexe Varianten kombinieren beispielsweise mehrere Kategorien innerhalb einer Zeitreihe oder eines Vergleichs.
 
-<div style="display: flex; gap: 1em; align-items: flex-start;">
-  <img src="assets/bar_simple.png" alt="..." style="width: 50%;">
-  <img src="assets/bar_complex.png" alt="..." style="width: 50%;">
-</div>
+<figure style="margin: 0 auto 1.5em; max-width: 800px;">
+  <div style="display: flex; gap: 1em; align-items: flex-start;">
+    <img src="assets/bar_simple.png" 
+         alt="..."
+         style="width: 50%;">
+    <img src="assets/bar_complex.png" 
+         alt="..." 
+         style="width: 50%;">
+  </div>
+</figure>
 
 Gestapelte Balken-Charts zerlegen einen Wert in seine Bestandteile — entweder mit absoluten Werten oder als 100-Prozent-Darstellung.
 
-<div style="display: flex; gap: 1em; align-items: flex-start;">
-  <img src="assets/stacked_bar_simple.png" alt="..." style="width: 50%;">
-  <img src="assets/stacked_bar_complex.png" alt="..." style="width: 50%;">
-</div>
+<figure style="margin: 0 auto 1.5em; max-width: 800px;">
+  <div style="display: flex; gap: 1em; align-items: flex-start;">
+    <img src="assets/stacked_bar_simple.png" 
+         alt="..." 
+         style="width: 50%;">
+    <img src="assets/stacked_bar_complex.png" 
+         alt="..." 
+         style="width: 50%;">
+  </div>
+</figure>
 
 Hinzu kommen visuelle Encodings, die für Alt-Texte besonders herausfordernd sind: Highlights (etwa farblich hervorgehobene Balken), Prognosen (gestrichelte Linien) und Events (vertikale Marker mit Beschriftung). Diese tragen zentrale Informationen — und müssen explizit beschrieben werden, sonst verschwindet die Aussage des Charts.
 
@@ -143,7 +168,11 @@ Die Kurzbeschreibung mit Diagrammtyp, Titel, Achsen und Wertbereich ist determin
 
 Selbst mit expliziten Wortlimits im Prompt produzierten die LLM-Texte durchgängig längere Beschreibungen als unsere Gold-Standards. Bei komplexen Charts war der Effekt am stärksten. Höhere Temperature-Werte verschärften ihn zusätzlich.
 
-<img src="assets/character-counts.png" alt="..." style="max-width: 700px; width: 100%;">
+<figure style="max-width: 550px; margin: 0 auto 1.5em;">
+  <img src="assets/character-counts.png" 
+       alt="..." 
+       style="width: 100%; display: block;">
+</figure>
 
 Interessant dabei: Die interviewten Personen bewerteten Vollständigkeit oft besser bei längeren Texten — aber Kürze gleichzeitig schlechter. Das LLM-as-a-Judge war strenger und vergab niedrigere Conciseness-Scores. Das deckt sich mit dem qualitativen Feedback der Interviews: «Pseudo-Präzision» wie 2.54 Prozent statt rund 2 Prozent wurde explizit als kognitiv anstrengend genannt. Die Lehre: Wortlimits allein reichen nicht. Es braucht Stilregeln, die Aggregation und Rundung explizit fordern.
 
@@ -159,7 +188,12 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 ### Beispiel 1 — Pro-Kopf-Konsum Schweiz vs. China (gelungen)
 
-<img src="assets/example_1.png" alt="..." style="max-width: 700px; width: 100%;">
+
+<figure style="max-width: 550px; margin: 0 auto 1.5em;">
+  <img src="assets/assets/example_1.png" 
+       alt="..." 
+       style="width: 100%; display: block;">
+</figure>
 
 **Scores:** SBERT 0.95 · LLM-Judge (1–5): Klarheit 2, Vollständigkeit 3, Kürze 1, gefühlte Vollständigkeit 2, Neutralität 4, Korrektheit 2
 
@@ -175,7 +209,11 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 ### Beispiel 2 — Luft- und Wassertemperatur Zürich (gelungen)
 
-<img src="assets/example_2.png" alt="..." style="max-width: 700px; width: 100%;">
+<figure style="max-width: 550px; margin: 0 auto 1.5em;">
+  <img src="assets/assets/example_2.png" 
+       alt="..." 
+       style="width: 100%; display: block;">
+</figure>
 
 **Scores:** SBERT 0.92 · LLM-Judge (1–5): Klarheit 5, Vollständigkeit 5, Kürze 1, gefühlte Vollständigkeit 5, Neutralität 5, Korrektheit 5
 
@@ -191,7 +229,11 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 ### Beispiel 3 — Bevölkerungsprognose 2100 (problematisch)
 
-<img src="assets/example_3.png" alt="..." style="max-width: 700px; width: 100%;">
+<figure style="max-width: 550px; margin: 0 auto 1.5em;">
+  <img src="assets/assets/example_3.png" 
+       alt="..." 
+       style="width: 100%; display: block;">
+</figure>
 
 **Scores:** SBERT 0.64 · LLM-Judge (1–5): Klarheit 4, Vollständigkeit 2, Kürze 1, gefühlte Vollständigkeit 4, Neutralität 3, Korrektheit 5
 
@@ -207,7 +249,11 @@ Jetzt zu den konkreten Texten. Zwei Beispiele, bei denen die LLM-Generierung gru
 
 ### Beispiel 4 — Konsumentenpreise Deutschland, Schweiz, USA (problematisch)
 
-<img src="assets/example_4.png" alt="..." style="max-width: 700px; width: 100%;">
+<figure style="max-width: 550px; margin: 0 auto 1.5em;">
+  <img src="assets/assets/example_4.png" 
+       alt="..." 
+       style="width: 100%; display: block;">
+</figure>
 
 **Scores:** SBERT 0.68 · LLM-Judge (1–5): Klarheit 4, Vollständigkeit 4, Kürze 2, gefühlte Vollständigkeit 5, Neutralität 3, Korrektheit 2
 
@@ -265,7 +311,7 @@ Dieser Beitrag basiert auf dem Challenge-X-Projekt *Improving Accessibility of C
 
 
 <div style="display: flex; gap: 1em; align-items: flex-start;">
-  <img src="assets/NZZ.png" alt="NZZ Logog" style="width: 50%;">
-  <img src="assets/SBV.jpg" alt="BV Logo" style="width: 50%;">
-  <img src="assets/FHNW_HSI_DE.png" alt="FHNW Logo" style="width: 50%;">
+  <img src="assets/NZZ.png" alt="NZZ Logog" style="width: 30%;">
+  <img src="assets/SBV.jpg" alt="BV Logo" style="width: 30%;">
+  <img src="assets/FHNW_HSI_DE.png" alt="FHNW Logo" style="width: 30%;">
 </div>
