@@ -358,7 +358,7 @@ Dieser Beitrag basiert auf dem Challenge-X-Projekt *Improving Accessibility of C
 
 
 <div style="display: flex; gap: 1em; align-items: center; margin-top: 2em; max-width: 900px;">
-  <img src="assets/NZZ.png" alt="NZZ Logo" style="max-width: 100%;">
-  <img src="assets/SBV.jpg" alt="SBV Logo" style="max-width: 100%;">
-  <img src="assets/FHNW_HSI_DE.png" alt="FHNW Logo" style="max-width: 100%;">
+  <img src="assets/NZZ.png" alt="NZZ Logo" style="width: 100%; max-width: 300px; height: auto;">
+  <img src="assets/SBV.jpg" alt="SBV Logo" style="width: 100%; max-width: 300px; height: auto;">
+  <img src="assets/FHNW_HSI_DE.png" alt="FHNW Logo" style="width: 100%; max-width: 300px; height: auto;">
 </div>
