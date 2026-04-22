@@ -15,7 +15,7 @@ Für viele dieser Menschen ist der E-Kiosk des Schweizerischen Blinden- und Sehb
 
 Genau hier setzte unser Challenge-X-Projekt an der FHNW an. Gemeinsam mit der NZZ und dem SBV haben wir ein Semester lang untersucht, wie weit Sprachmodelle (LLMs) heute beim automatischen Generieren von Alt-Texten für Charts kommen — und wo sie an Grenzen stossen.
 
-![Illustration: Person mit Gedankenblase neben einem Chart, in der Blase steht «alt text»](assets/title-illustration.png)
+<img src="assets/title-illustration.png" alt="..." style="max-width: 500px; width: 100%;">
 
 ## Lesen ohne Augen — und was dabei verloren geht
 
@@ -23,7 +23,8 @@ Bevor wir uns den technischen Teil anschauen, lohnt es sich kurz zu verstehen, w
 
 Eine Ergänzung zum Screen Reader sind Braille-Displays. Diese Geräte stellen Text taktil dar, indem kleine Stifte sich heben oder senken und so Braille-Zeichen formen. Wer Braille flüssig liest, kann darüber Text fast wie mit den Augen «scannen» — vor- und zurückspringen, sich orientieren. Allerdings nutzt nicht jede sehbehinderte Person ein Braille-Display: Wer im Erwachsenenalter erblindet, lernt Braille oft nicht mehr fluent. Audio bleibt dann der einzige Zugang.
 
-![Foto eines Braille-Displays, eine Hand liest darüber](assets/braille_display.jpg)
+<img src="assets/braille_display.jpg" alt="..." 
+     style="float: right; width: 150px; margin: 0 0 1em 1em;">
 
 Ein zentraler Unterschied zu sehenden Lesenden: Audio ist sequenziell. Wer hört, bekommt Information Wort für Wort — anders als beim Sehen, wo wir auf einen Blick eine ganze Seite überfliegen können. Genau das macht Charts zur Herausforderung. Ein Liniendiagramm vermittelt sehenden Personen sofort einen Eindruck von Trend, Spitzen und Tiefpunkten. Über Audio muss diese Information erst sequenziell aufgebaut werden — das verlangt mehr kognitive Anstrengung und stellt höhere Anforderungen an die Beschreibung.
 
